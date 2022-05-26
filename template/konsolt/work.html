@@ -1,0 +1,208 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+        <!-- Inner Banner -->
+        <div class="inner-banner">
+            <div class="container">
+                <div class="inner-title text-center">
+                    <h3>Projects</h3>
+                    <ul>
+                        <li>
+                            <a href={% url "index" %}>Home</a>
+                        </li>
+                        <li>
+                            <i class='bx bx-chevrons-right'></i>
+                        </li>
+                        <li>Projects</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="inner-shape">
+                <img src="assets/images/shape/inner-shape.png" alt="Images">
+            </div>
+        </div>
+        <!-- Inner Banner End -->
+
+        <!-- Case Study Area -->
+        <div class="case-study-area pt-100 pb-70">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="sp-color2">Projects</span>
+                    <h2>Introduce Our Projects and Check Recent Work </h2>
+                </div>
+
+                <div class="row pt-45">
+
+                  {% for work in works %}
+                    <div class="col-lg-4 col-md-6">
+                        <div class="case-study-item">
+                            <a href={{work.get_absolute_url}}>
+                                <img src={{work.picture.url}} alt="Images">
+                            </a>
+                            <div class="content">
+                                <h3><a href="{{work.get_absolute_url}}">Business Solution</a></h3>
+                                <ul>
+                                    <li>Business</li>
+                                    <li>Planing</li>
+                                </ul>
+                                <a href="{{work.get_absolute_url}}" class="more-btn"><i class='bx bx-right-arrow-alt'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                  {% endfor %}
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="case-study-item">
+                            <a href="case-details.html">
+                                <img src="assets/images/case-study/case-study2.jpg" alt="Images">
+                            </a>
+                            <div class="content">
+                                <h3><a href="case-details.html">Web Development</a></h3>
+                                <ul>
+                                    <li><a href="case-details.html">Design</a></li>
+                                    <li><a href="case-details.html">Development</a> </li>
+                                </ul>
+                                <a href="work-detail.html" class="more-btn"><i class='bx bx-right-arrow-alt'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="case-study-item">
+                            <a href="work-detail.html">
+                                <img src="assets/images/case-study/case-study3.jpg" alt="Images">
+                            </a>
+                            <div class="content">
+                                <h3><a href="work-detail.html">Social Media App</a></h3>
+                                <ul>
+                                    <li><a href="work-detail.html">Design</a></li>
+                                    <li><a href="work-detail.html">Social</a> </li>
+                                </ul>
+                                <a href="work-detail.html" class="more-btn"><i class='bx bx-right-arrow-alt'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="case-study-item">
+                            <a href="work-detail.html">
+                                <img src="assets/images/case-study/case-study4.jpg" alt="Images">
+                            </a>
+                            <div class="content">
+                                <h3><a href="work-detail.html">UI/UX Research</a></h3>
+                                <ul>
+                                    <li><a href="work-detail.html">UI/UX Design</a></li>
+                                    <li><a href="work-detail.html">Research</a></li>
+                                </ul>
+                                <a href="work-detail.html" class="more-btn"><i class='bx bx-right-arrow-alt'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="case-study-item">
+                            <a href="work-detail.html">
+                                <img src="assets/images/case-study/case-study5.jpg" alt="Images">
+                            </a>
+                            <div class="content">
+                                <h3><a href="work-detail.html">Business Growth</a></h3>
+                                <ul>
+                                    <li><a href="work-detail.html">Business</a></li>
+                                    <li><a href="work-detail.html">Growth</a></li>
+                                </ul>
+                                <a href="work-detail.html" class="more-btn"><i class='bx bx-right-arrow-alt'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="case-study-item">
+                            <a href="work-detail.html">
+                                <img src="assets/images/case-study/case-study6.jpg" alt="Images">
+                            </a>
+                            <div class="content">
+                                <h3><a href="work-detail.html">Consulting</a></h3>
+                                <ul>
+                                    <li><a href="work-detail.html">Consulting</a></li>
+                                    <li><a href="work-detail.html">Planing</a></li>
+                                </ul>
+                                <a href="work-detail.html" class="more-btn"><i class='bx bx-right-arrow-alt'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="case-study-item">
+                            <a href="work-detail.html">
+                                <img src="assets/images/case-study/case-study7.jpg" alt="Images">
+                            </a>
+                            <div class="content">
+                                <h3><a href="work-detail.html">IT Management</a></h3>
+                                <ul>
+                                    <li><a href="work-detail.html">IT</a></li>
+                                    <li><a href="work-detail.html">Management</a></li>
+                                </ul>
+                                <a href="work-detail.html" class="more-btn"><i class='bx bx-right-arrow-alt'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="case-study-item">
+                            <a href="work-detail.html">
+                                <img src="assets/images/case-study/case-study8.jpg" alt="Images">
+                            </a>
+                            <div class="content">
+                                <h3><a href="work-detail.html">Data Analysis</a></h3>
+                                <ul>
+                                    <li><a href="work-detail.html">Data</a></li>
+                                    <li><a href="work-detail.html">Analysis</a></li>
+                                </ul>
+                                <a href="work-detail.html" class="more-btn"><i class='bx bx-right-arrow-alt'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3">
+                        <div class="case-study-item">
+                            <a href="work-detail.html">
+                                <img src="assets/images/case-study/case-study9.jpg" alt="Images">
+                            </a>
+                            <div class="content">
+                                <h3><a href="work-detail.html">Business Reform</a></h3>
+                                <ul>
+                                    <li><a href="work-detail.html">Business</a></li>
+                                    <li><a href="work-detail.html">Reform</a></li>
+                                </ul>
+                                <a href="work-detail.html" class="more-btn"><i class='bx bx-right-arrow-alt'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                {% if paginated %}
+                    <div class="col-lg-12 col-md-12 text-center">
+                        <div class="pagination-area">
+                            <a href="case-study.html" class="prev page-numbers">
+                                <i class='bx bx-left-arrow-alt'></i>
+                            </a>
+
+                            <span class="page-numbers current" aria-current="page">1</span>
+                            <a href="case-study.html" class="page-numbers">2</a>
+                            <a href="case-study.html" class="page-numbers">3</a>
+                            
+                            <a href="case-study.html" class="next page-numbers">
+                                <i class='bx bx-right-arrow-alt'></i>
+                            </a>
+                        </div>
+                    </div>
+                {% endif %}
+                </div>
+            </div>
+        </div>
+        <!-- Case Study Area End -->
+
+{% endblock content %}
+
+   
